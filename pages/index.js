@@ -14,7 +14,7 @@ export default function Home(props) {
     async (number) => {
       console.log(number);
       const { data } = await axios.post(
-        "http://localhost:3000/api/generateNumbers",
+        "https://phone-generator.vercel.app/api/generateNumbers",
         { number },
         {
           headers: {
