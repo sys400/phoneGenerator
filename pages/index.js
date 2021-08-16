@@ -15,7 +15,14 @@ export default function Home(props) {
       console.log(number);
       const { data } = await axios.post(
         "http://localhost:3000/api/generateNumbers",
-        { number }
+        { number },
+        {
+          headers: {
+            "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, OPTIONS",
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+          },
+        }
       );
       setPhone([...phone, data.phoneCollection]);
     },
