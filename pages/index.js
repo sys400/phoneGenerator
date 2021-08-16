@@ -2,7 +2,7 @@ import axios from "axios";
 import { useCallback, useState } from "react";
 
 import "tailwindcss/tailwind.css";
-import { ExportCSV } from "../components/ExportCSV";
+import { ExportCSV } from "./../components/exportCsv";
 import Navbar from "../components/navbar";
 
 export default function Home(props) {
